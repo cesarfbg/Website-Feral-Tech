@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-white bg-feral-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 3xl:max-w-[1400px] 4xl:max-w-[1800px] 5xl:max-w-[2400px];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-feral-orange px-6 py-3 text-base font-semibold text-white transition-all duration-300 hover:bg-orange-500 hover:shadow-lg hover:shadow-feral-orange/25 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-feral-orange/50 focus:ring-offset-2 focus:ring-offset-feral-dark sm:px-8 sm:py-4 sm:text-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-feral-turquoise px-6 py-3 text-base font-semibold text-feral-turquoise transition-all duration-300 hover:bg-feral-turquoise hover:text-feral-dark hover:shadow-lg hover:shadow-feral-turquoise/25 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-feral-turquoise/50 focus:ring-offset-2 focus:ring-offset-feral-dark sm:px-8 sm:py-4 sm:text-lg;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-feral-turquoise/30 hover:bg-white/[0.08] hover:shadow-xl hover:shadow-feral-turquoise/5 sm:p-8;
+  }
+}

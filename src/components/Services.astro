@@ -1,0 +1,91 @@
+---
+const whatsappImplementacion = 'https://wa.me/573172247166?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20implementación%20y%20migración%20de%20Odoo';
+const whatsappAuditoria = 'https://wa.me/573172247166?text=Hola%2C%20quiero%20solicitar%20una%20auditoría%20gratuita%20de%20mi%20flujo%20en%20Odoo';
+
+const services = [
+  {
+    icon: `<svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>`,
+    title: 'Migración ERP a Odoo',
+    description: 'Transición segura desde cualquier sistema hacia Odoo. Cero pérdida de datos.',
+  },
+  {
+    icon: `<svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`,
+    title: 'Implementación Odoo',
+    description: 'Configuración e implementación desde cero adaptada a los procesos de tu empresa.',
+  },
+  {
+    icon: `<svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`,
+    title: 'Consultoría Especializada',
+    description: 'Análisis profundo de tus flujos de negocio para optimizar al máximo tu operación.',
+  },
+  {
+    icon: `<svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`,
+    title: 'Soporte Continuo',
+    description: 'Acompañamiento post-implementación para garantizar el éxito de tu operación.',
+  },
+];
+---
+
+<section id="servicios" class="relative py-20 sm:py-28 lg:py-32 overflow-hidden">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-feral-dark via-feral-steel/20 to-feral-dark"></div>
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-feral-turquoise/20 to-transparent"></div>
+
+  <!-- Decorative -->
+  <div class="absolute -top-40 right-0 h-80 w-80 rounded-full bg-feral-turquoise/5 blur-3xl"></div>
+
+  <div class="section-container relative z-10">
+    <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+      <!-- Left: Content -->
+      <div>
+        <span class="mb-4 inline-block text-sm font-semibold uppercase tracking-widest text-feral-turquoise">
+          Servicios
+        </span>
+        <h2 class="text-3xl font-bold sm:text-4xl lg:text-5xl 4xl:text-6xl">
+          Tu camino hacia la
+          <span class="bg-gradient-to-r from-feral-turquoise to-feral-sky bg-clip-text text-transparent">
+            transformación digital
+          </span>
+        </h2>
+        <p class="mt-4 text-base text-white/60 sm:text-lg max-w-xl 4xl:text-xl">
+          Ya sea que inicies desde cero o migres de un sistema anterior, en Feral Tech aseguramos una transición fluida y segura hacia Odoo.
+        </p>
+
+        <!-- CTA -->
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href={whatsappAuditoria} target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            Auditoría Gratuita
+          </a>
+          <a href={whatsappImplementacion} target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            Consultar Implementación
+          </a>
+        </div>
+
+        <!-- Google Workspace teaser -->
+        <div class="mt-10 flex items-center gap-3 rounded-xl border border-feral-sky/20 bg-feral-sky/5 p-4">
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-feral-sky/10">
+            <svg class="h-5 w-5 text-feral-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-feral-sky">Próximamente</p>
+            <p class="text-xs text-white/50">Lleva tu productividad a la nube con Google Workspace y Feral Tech.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Service cards -->
+      <div class="grid gap-4 sm:grid-cols-2">
+        {services.map((service) => (
+          <div class="glass-card !p-5 flex flex-col gap-3">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-feral-turquoise/10 text-feral-turquoise">
+              <Fragment set:html={service.icon} />
+            </div>
+            <h3 class="text-lg font-bold">{service.title}</h3>
+            <p class="text-sm text-white/60 leading-relaxed">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
