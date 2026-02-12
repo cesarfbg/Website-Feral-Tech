@@ -12,5 +12,8 @@
     "@fontsource/poppins": "^5.2.7",
     "astro": "^5.3.0",
     "tailwindcss": "^3.4.17"
+  },
+  "optionalDependencies": {
+    "esbuild": "^0.27.3"
   }
 }
