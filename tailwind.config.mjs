@@ -11,8 +11,8 @@ export default {
         'feral-orange': '#F26419',
       },
       fontFamily: {
-        heading: ['Outfit Variable', 'Outfit', 'system-ui', 'sans-serif'],
-        body: ['Inter Variable', 'Inter', 'system-ui', 'sans-serif'],
+        heading: ['Poppins', 'system-ui', 'sans-serif'],
+        body: ['Poppins', 'system-ui', 'sans-serif'],
       },
       screens: {
         '3xl': '1920px',
