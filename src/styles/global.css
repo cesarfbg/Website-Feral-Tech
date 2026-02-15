@@ -13,9 +13,18 @@
     @apply font-body text-white bg-feral-dark;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
+}
+
+svg {
+  shape-rendering: geometricPrecision;
 }
 
 @layer components {
@@ -33,5 +42,19 @@
 
   .glass-card {
     @apply rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-feral-turquoise/30 hover:bg-white/[0.08] hover:shadow-xl hover:shadow-feral-turquoise/5 sm:p-8;
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
   }
 }

@@ -27,6 +27,9 @@ const footerLinks = [
     ],
   },
 ];
+
+import { Image } from 'astro:assets';
+import isotype from '../assets/branding/isotype_clear.png';
 ---
 
 <footer class="relative pt-16 pb-8 sm:pt-20 overflow-hidden">
@@ -39,11 +42,9 @@ const footerLinks = [
       <!-- Brand -->
       <div class="lg:col-span-2">
         <a href="#inicio" class="flex items-center gap-3 group mb-5">
-          <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-feral-turquoise to-feral-steel flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <!-- Placeholder: replace with <img src="/logo.png" alt="Feral Tech" class="h-full w-full object-contain" /> -->
-            <span class="text-lg font-heading font-bold text-white">FT</span>
-          </div>
-          <span class="text-lg font-heading font-bold text-white">Feral Tech</span>
+           <div class="relative h-16 w-auto transition-transform duration-300 group-hover:scale-105">
+             <Image src={isotype} alt="Feral Tech" class="h-full w-auto object-contain" />
+           </div>
         </a>
         <p class="text-sm text-white/50 leading-relaxed max-w-sm">
           Soluciones tecnológicas avanzadas para empresas en Colombia. Especializados en la optimización del ERP Odoo y servicios de productividad.

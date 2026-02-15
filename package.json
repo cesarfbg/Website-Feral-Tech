@@ -16,5 +16,8 @@
   },
   "optionalDependencies": {
     "esbuild": "^0.27.3"
+  },
+  "devDependencies": {
+    "lucide-astro": "^0.556.0"
   }
 }

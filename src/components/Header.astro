@@ -7,19 +7,24 @@ const navLinks = [
   { label: 'Servicios', href: '#servicios' },
   { label: 'Nosotros', href: '#nosotros' },
 ];
+
+import { Image } from 'astro:assets';
+import logoHorizontal from '../assets/branding/logo_horizontal.png';
+import isotype from '../assets/branding/isotype.png';
 ---
 
-<header id="main-header" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
+<header id="main-header" class="fixed top-0 left-0 z-50 w-full bg-white/100 backdrop-blur-md border-b border-slate-200/50 transition-all duration-300">
   <nav class="section-container flex items-center justify-between py-4 lg:py-5">
     <!-- Logo -->
     <a href="#inicio" class="flex items-center gap-3 group">
-      <div class="relative h-10 w-10 sm:h-12 sm:w-12 overflow-hidden rounded-lg bg-gradient-to-br from-feral-turquoise to-feral-steel flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-lg shadow-feral-turquoise/20">
-        <!-- Placeholder: replace this div with <img src="/logo.png" alt="Feral Tech" class="h-full w-full object-contain" /> -->
-        <span class="text-lg sm:text-xl font-heading font-bold text-white">FT</span>
+      <!-- Mobile Logo (Isotype) -->
+      <div class="block sm:hidden relative h-12 w-auto min-w-[120px] overflow-hidden rounded-lg flex items-center justify-start transition-transform duration-300 group-hover:scale-105">
+        <Image src={logoHorizontal} alt="Feral Tech" class="h-full w-auto object-contain" />
       </div>
-      <div class="hidden sm:block">
-        <span class="text-lg font-heading font-bold text-white">Feral Tech</span>
-        <span class="block text-[10px] tracking-[0.25em] uppercase text-feral-sky/70">Imagina · Crea · Evoluciona</span>
+
+      <!-- Desktop Logo (Horizontal) -->
+      <div class="hidden sm:block relative h-16 w-auto transition-transform duration-300 group-hover:scale-105">
+         <Image src={logoHorizontal} alt="Feral Tech" class="h-full w-auto object-contain" />
       </div>
     </a>
 
@@ -28,7 +33,7 @@ const navLinks = [
       {navLinks.map(link => (
         <a
           href={link.href}
-          class="text-sm font-medium text-white/80 transition-colors duration-200 hover:text-feral-turquoise"
+          class="text-medium font-medium text-feral-dark/80 transition-colors duration-200 hover:text-feral-turquoise"
         >
           {link.label}
         </a>
@@ -41,15 +46,15 @@ const navLinks = [
     <!-- Mobile menu button -->
     <button
       id="mobile-menu-btn"
-      class="lg:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10"
+      class="lg:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-lg text-feral-dark transition-colors hover:bg-slate-100"
       aria-label="Abrir menú"
       aria-expanded="false"
     >
       <svg id="menu-icon-open" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
       <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </nav>
@@ -60,7 +65,7 @@ const navLinks = [
       {navLinks.map(link => (
         <a
           href={link.href}
-          class="mobile-nav-link text-base font-medium text-white/80 py-2 transition-colors hover:text-feral-turquoise"
+          class="mobile-nav-link text-base font-medium text-feral-dark/80 py-2 transition-colors hover:text-feral-turquoise"
         >
           {link.label}
         </a>
@@ -85,9 +90,9 @@ const navLinks = [
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
     if (currentScroll > 50) {
-      header.classList.add('bg-feral-dark/95', 'backdrop-blur-md', 'shadow-lg', 'shadow-black/10');
+      header.classList.add('shadow-lg', 'shadow-black/5');
     } else {
-      header.classList.remove('bg-feral-dark/95', 'backdrop-blur-md', 'shadow-lg', 'shadow-black/10');
+      header.classList.remove('shadow-lg', 'shadow-black/5');
     }
     lastScroll = currentScroll;
   });
@@ -101,7 +106,7 @@ const navLinks = [
     iconClose.classList.toggle('hidden', !menuOpen);
     mobileBtn.setAttribute('aria-expanded', String(menuOpen));
     if (menuOpen) {
-      header.classList.add('bg-feral-dark/95', 'backdrop-blur-md');
+      header.classList.add('bg-white');
     }
   });
 
